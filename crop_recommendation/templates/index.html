@@ -217,6 +217,7 @@
         {% if user.is_authenticated %}
         <div class="ms-auto d-flex align-items-center">
           <p class="text-white mb-0 me-3">Welcome, {{ user.username }}!</p>
+          <a class="text-white mb-0 me-3" href="{% url 'users-profile' %}" class="nav-item nav-link">Profile</a>
           <form method="POST" action="{% url 'logout' %}">
             {% csrf_token %}
             <button type="submit" class="btn btn-warning btn-sm">Logout</button>
