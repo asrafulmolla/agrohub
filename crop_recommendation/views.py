@@ -106,7 +106,9 @@ def predict(request):
     
     
     
-    
+@login_required
+def profile(request):
+    return render(request, 'profile.html')   
     
     
     

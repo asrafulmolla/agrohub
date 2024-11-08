@@ -1,5 +1,6 @@
 # models.py
 from django.db import models
+from django.contrib.auth.models import User
 
 class CropPrediction(models.Model):
     nitrogen = models.FloatField()
@@ -14,3 +15,14 @@ class CropPrediction(models.Model):
 
     def __str__(self):
         return f"{self.timestamp} - {self.predicted_crop}"
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    land = models.ForeignKey(CropPrediction, on_delete=models.CASCADE,null = True, blank=True)
+
+    avatar = models.ImageField(default='default.jpg', upload_to='profile_images')
+    bio = models.TextField()
+
+    def __str__(self):
+        return self.user.username
