@@ -1,4 +1,4 @@
-# AlgoHub ML-Based Web Application for Farmers
+# AgroHub ML-Based Web Application for Farmers
 
 ## Overview
 This project is a **Machine Learning-based web application** designed to assist local farmers in optimizing their farming practices. The application provides actionable insights on the best fruits to grow based on seasonal, climatic, and market conditions. It uses **Python**, **Django**, and basic **Machine Learning** techniques while leveraging real-world agricultural data from **Pakistan**.
